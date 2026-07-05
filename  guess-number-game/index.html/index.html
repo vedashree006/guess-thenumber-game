@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Number Game</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 60px;
+            background: #f5f5f5;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        input, select {
+            padding: 8px;
+            width: 90%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>🎯 Guess the Number</h2>
+
+    <label>Select Difficulty:</label>
+    <select id="difficulty">
+        <option value="easy">Easy (1–50, 10 tries)</option>
+        <option value="medium">Medium (1–100, 8 tries)</option>
+        <option value="hard">Hard (1–200, 5 tries)</option>
+    </select>
+
+    <button onclick="startGame()">Start Game</button>
+
+    <p id="info"></p>
+
+    <input type="number" id="guessInput" placeholder="Enter guess" disabled>
+    <button onclick="checkGuess()" disabled id="guessBtn">Guess</button>
+
+    <p id="message"></p>
+    <p id="attempts"></p>
+
+    <button onclick="startGame()">🔁 Play Again</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
